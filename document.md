@@ -91,4 +91,4 @@ Properties
 
 ## To be improved
 
-The window will flash when dragging a circle, it is because when it erases the previous circles, it erases all the pointss in the window as well. So it need to be refreshed. I haven't found out the method of erasing only the circles yet.
+It's not very smooth when dragging a circle.

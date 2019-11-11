@@ -48,6 +48,8 @@ class MyFrame(wx.Frame):
                 mouseEvent.GetLogicalPosition(wx.ClientDC(self)).Get(),
                 mouseEvent.GetEventObject().GetId()
                 )
+        print(mouseEvent.GetEventObject().GetId())
+        print(self.center)
         self.SetStatusText(str(self.center))
 
     def onMotion(self, event):
@@ -67,8 +69,6 @@ class MyFrame(wx.Frame):
             # calculate the radius
             self.radius = math.sqrt((position[0] - self.center[0]) ** 2 + (position[1] - self.center[1]) ** 2)
             dc = wx.ClientDC(self)
-            # remove the previous circles
-            dc.Clear()
             # force to refresh
             self.Refresh()
             self.Update()
